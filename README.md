@@ -1,1 +1,3 @@
-[![Watch the video](https://i.imgur.com/jV8msLM.jpeg)](https://streamable.com/yukioo)
+Click [here](https://streamable.com/yukioo) to watch a video demo.
+
+[!alt text](https://i.imgur.com/jV8msLM.jpeg)
