@@ -1,0 +1,268 @@
+.text-area {
+
+    /* Set the background color */
+    -fx-font-family: "Arial", sans-serif;
+    /* Use the Papyrus font */
+    -fx-font-size: 14px;
+    /* Set the font size to 20px */
+    -fx-font-weight: bolder;
+    /* Make the text bold */
+    -fx-text-fill: rgb(0, 0, 0);
+    /* Set text color to black */
+
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    /* Set the background color */
+}
+
+TextArea .text {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.5, 0.0, 0.0);
+}
+
+.text-field {
+    -fx-background-image: url("/images/parchmentbg1.jpg");
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    /* Set the background color */
+    -fx-font-family: "Arial", sans-serif;
+
+
+    /* Use the Papyrus font */
+    -fx-font-size: 20px;
+    /* Set the font size to 20px */
+    -fx-font-weight: bolder;
+    /* Make the text bold */
+    -fx-text-fill: black;
+    /* Set text color to black */
+
+}
+
+.text-field .text {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0.0, 0.0);
+}
+
+
+.choice-box {
+    /*-fx-background-color: #774c1c;
+    -fx-border-color: #d4af37;*/
+
+    -fx-font-family: "Arial", sans-serif;
+    -fx-text-fill: black;
+    /* Set text color to black */
+    -fx-font-weight: bolder;
+    /* Make text bold */
+    -fx-font-size: 18px;
+    -fx-effect: dropshadow(gaussian, #00ff00, 10, 0.5, 0, 0);
+    -fx-background-image: url('/images/parchmentbg1.jpg');
+    -fx-background-size: cover;
+}
+
+
+
+
+.choice-box .context-menu {
+    -fx-background-image: url('/images/parchmentbg1.jpg');
+}
+
+/* Style the text inside the ChoiceBox dropdown */
+.choice-box .list-cell {
+    -fx-text-fill: black;
+    /* Set the text color */
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+}
+
+.combo-box {
+    /*-fx-background-color: #774c1c;
+    -fx-border-color: #d4af37;*/
+
+    -fx-font-family: "Arial", sans-serif;
+    -fx-text-fill: black;
+    /* Set text color to black */
+    -fx-font-weight: bolder;
+    /* Make text bold */
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(gaussian, #00ff00, 10, 0.5, 0, 0);
+    -fx-background-image: url('/images/parchmentbg1.jpg');
+    -fx-background-size: cover;
+}
+
+
+.button {
+    -fx-text-fill: black;
+    /* Set text color to black */
+    -fx-font-weight: bold;
+    /* Make text bold */
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-effect: dropshadow(gaussian, #00ff00, 10, 0.5, 0, 0);
+    -fx-background-image: url('/images/parchmentbg1.jpg');
+}
+
+.combo-box .list-cell {
+    -fx-background-image: url('/images/parchmentbg1.jpg');
+}
+
+/* Style the text inside the ChoiceBox dropdown */
+.combo-box-popup .list-cell {
+    -fx-text-fill: black;
+    /* Set the text color */
+    -fx-font-weight: bolder;
+    -fx-font-size: 20px;
+}
+
+
+.text-area .content {
+    -fx-background-image: url("/images/parchmentbg1.jpg");
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    /* Set the background color */
+    -fx-font-family: "Papyrus";
+    /* Use the Papyrus font */
+    -fx-font-size: 20px;
+    /* Set the font size to 20px */
+    -fx-font-weight: bold;
+    /* Make the text bold */
+    -fx-text-fill: black;
+    /* Set text color to black */
+}
+
+/* Define a custom style class */
+
+/* Apply the custom style class to a button */
+.button.custom-button {
+    -fx-background-color: #000000;
+}
+
+/* ScrollBar */
+.scroll-pane {
+    -fx-background-color: #d3d3d3;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-border-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black, 90.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: derive(#4D4C4F, 10.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button,
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+}
+
+.popUp HBox {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-background-color: #45475a;
+    -fx-background-image: url("/images/parchmentbg1.jpg");
+    -fx-pref-height: 80px;
+    -fx-pref-width: 550px;
+    -fx-max-width: 550px;
+    -fx-spacing: 10px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+}
+
+.popUp HBox .label {
+    -fx-text-fill: #000000;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0.0, 0.0);
+}
+
+.popUp HBox VBox {
+    -fx-alignment: center-left;
+    -fx-padding: 2.5px 10px 2.5px 10px;
+}
+
+.popUp HBox VBox Text {
+    -fx-text-fill: #000000;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 10, 0.5, 0.0, 0.0);
+}
+
+.popUp HBox StackPane ImageView {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0.0, 0.0);
+}
+
+.popUp HBox StackPane ImageView:hover {
+    -fx-cursor: hand;
+}
+
+.riddle {
+    -fx-background-color: #45475a;
+    -fx-background-image: url("/images/parchmentbg1.jpg");
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-alignment: centre;
+}
+
+.riddle StackPane VBox Label {
+    -fx-text-fill: #000;
+    -fx-font-size: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0.0, 0.0);
+}
+
+.riddle StackPane {
+    -fx-alignment: center-left;
+}
+
+.riddle StackPane VBox {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+}
+
+.riddle StackPane VBox TextArea {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0.5, 0.0, 0.0);
+}
+
+.riddle StackPane VBox TextArea .text {
+    -fx-text-fill: #000000;
+    -fx-font-size: 15px;
+}
+
+.riddle StackPane ImageView:hover {
+    -fx-cursor: hand;
+}
+
+.white-text {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.5, 0.0, 0.0);
+}
+
+.white-text-small {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0.0, 0.0);
+}
+
+.white-text.label .text {
+    -fx-fill: #ffffff;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 0.25px;
+}
+
+.hover:hover {
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-cursor: hand;
+}

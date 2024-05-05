@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="chestPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyboardInput" prefHeight="730.0" prefWidth="800.0" stylesheets="@../css/roomStylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ChestController">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/ChestBackground.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="riddleDisplay" layoutX="205.0" layoutY="135.0" prefHeight="350.0" prefWidth="400.0" stylesheets="@../css/roomStylesheet.css" />
+      <Rectangle fx:id="keyinlock1" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="198.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <Rectangle fx:id="keyinlock2" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="401.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <Rectangle fx:id="keyinlock3" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="604.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <Rectangle fx:id="keyinlock4" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="198.0" layoutY="387.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <Rectangle fx:id="keyinlock5" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="401.0" layoutY="387.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <Rectangle fx:id="keyinlock6" arcHeight="5.0" arcWidth="5.0" disable="true" fill="#ffe7b0" height="30.0" layoutX="604.0" layoutY="387.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="15.0" />
+      <ImageView fx:id="keyHole1" fitHeight="131.0" fitWidth="161.0" layoutX="160.0" layoutY="160.0" onMouseClicked="#clickKeyHole1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="185.0" layoutY="185.0" prefHeight="17.0" prefWidth="21.0" styleClass="white-text" text="1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <ImageView fx:id="keyHole6" fitHeight="131.0" fitWidth="161.0" layoutX="566.0" layoutY="310.0" onMouseClicked="#clickKeyHole6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="178.0" prefHeight="30.0" prefWidth="31.0" styleClass="white-text" text="2" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <ImageView fx:id="keyHole5" fitHeight="131.0" fitWidth="161.0" layoutX="363.0" layoutY="310.0" onMouseClicked="#clickKeyHole5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="591.0" layoutY="178.0" styleClass="white-text" text="3" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="185.0" layoutY="331.0" prefHeight="36.0" prefWidth="28.0" styleClass="white-text" text="4" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <ImageView fx:id="keyHole3" fitHeight="131.0" fitWidth="161.0" layoutX="566.0" layoutY="160.0" onMouseClicked="#clickKeyHole3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="331.0" styleClass="white-text" text="5" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <ImageView fx:id="keyHole4" fitHeight="131.0" fitWidth="161.0" layoutX="160.0" layoutY="310.0" onMouseClicked="#clickKeyHole4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="591.0" layoutY="331.0" prefHeight="29.0" prefWidth="34.0" styleClass="white-text" text="6" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <ImageView fx:id="keyHole2" fitHeight="131.0" fitWidth="161.0" layoutX="363.0" layoutY="160.0" onMouseClicked="#clickKeyHole2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedlock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" alignment="CENTER" contentDisplay="RIGHT" layoutX="338.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="125.0" styleClass="white-text" text="s" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReturnToCorridor" layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onReturnToCorridorClicked" prefHeight="40.0" prefWidth="80.0" stylesheets="@../css/roomStylesheet.css" text="Back" />
+      <Label fx:id="lblKey1" layoutX="181.0" layoutY="293.0" style="-fx-background-color: white;" text="Label" />
+      <Label fx:id="lblKey2" layoutX="378.0" layoutY="293.0" style="-fx-background-color: white;" text="Label" />
+      <Label fx:id="lblKey3" layoutX="546.0" layoutY="293.0" style="-fx-background-color: white;" text="Label" />
+      <Label fx:id="lblKey4" layoutX="182.0" layoutY="448.0" style="-fx-background-color: white;" stylesheets="@../css/roomStylesheet.css" text="Label" />
+      <Label fx:id="lblKey5" layoutX="378.0" layoutY="448.0" style="-fx-background-color: white;" stylesheets="@../css/roomStylesheet.css" text="Label" />
+      <Label fx:id="lblKey6" layoutX="546.0" layoutY="448.0" style="-fx-background-color: white;" stylesheets="@../css/roomStylesheet.css" text="Label" />
+      <Pane fx:id="popUp" layoutX="125.0" layoutY="550.0" prefHeight="80.0" prefWidth="550.0" />
+      <Pane fx:id="visualDungeonMaster" layoutX="20.0" layoutY="156.0" onMouseClicked="#getAi" prefHeight="131.0" prefWidth="113.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="113.0" layoutX="8.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dungeonMasterImageCrop.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exclamationMark" fitHeight="64.0" fitWidth="64.0" layoutX="63.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exclamation.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="soundToggle" fitHeight="40.0" fitWidth="40.0" layoutX="650.0" layoutY="20.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" styleClass="white-text-small">
+         <image>
+            <Image url="@../images/sound/audioOn.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="710.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickExit" prefHeight="40.0" prefWidth="70.0" stylesheets="@../css/roomStylesheet.css" text="Quit">
+         <font>
+            <Font name="Old English Text MT" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnOpen" layoutX="440.0" layoutY="500.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#openChest" prefHeight="40.0" prefWidth="80.0" stylesheets="@../css/roomStylesheet.css" text="Open" />
+      <Button fx:id="riddleButton" layoutX="260.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#getRiddle" prefHeight="40.0" prefWidth="90.0" stylesheets="@../css/roomStylesheet.css" text="Riddle" />
+      <VBox layoutX="700.0" layoutY="120.0" prefHeight="240.0" prefWidth="85.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 5px;">
+         <children>
+            <VBox fx:id="inventoryKey1" alignment="CENTER" onMouseClicked="#key1Click" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 1" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="inventoryKey2" alignment="CENTER" onMouseClicked="#key2Click" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 2" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="inventoryKey3" alignment="CENTER" onMouseClicked="#key3Click" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 3" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <Label fx:id="lblObjectiveMarker" alignment="CENTER" layoutX="250.0" layoutY="680.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" styleClass="white-text" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Group layoutX="-47.0" layoutY="359.0">
+         <children>
+            <ImageView fx:id="chatBackground" fitHeight="270.0" fitWidth="801.0" layoutX="45.0" layoutY="103.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/ChatBackground.jpeg" />
+               </image>
+            </ImageView>
+            <Button fx:id="closeButton" layoutX="58.0" layoutY="57.0" mnemonicParsing="false" onAction="#onHandleChat" prefHeight="40.0" prefWidth="84.0" text="Close" />
+            <TextArea fx:id="textArea" editable="false" layoutX="56.0" layoutY="103.0" prefHeight="207.0" prefWidth="782.0" styleClass="text-area" stylesheets="@../css/roomStylesheet.css" wrapText="true" />
+            <Button fx:id="sendButton" layoutX="657.0" layoutY="318.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClickSend" prefHeight="37.0" text="Send" />
+            <TextField fx:id="inputText" layoutX="57.0" layoutY="318.0" prefHeight="40.0" prefWidth="592.0" styleClass="text-field" stylesheets="@../css/roomStylesheet.css" />
+            <Button fx:id="switchButton" layoutX="739.0" layoutY="318.0" mnemonicParsing="false" onAction="#onSwitchView" prefWidth="99.0" text="Expand" />
+            <Button fx:id="showButton" layoutX="58.0" layoutY="319.0" mnemonicParsing="false" onAction="#onCreate" text="Chat" />
+            <Label fx:id="hintField" alignment="CENTER" contentDisplay="RIGHT" layoutX="142.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="294.0" text="5 Hint(s) Remaining" textFill="WHITE">
+               <font>
+                  <Font name="Old English Text MT" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</Pane>

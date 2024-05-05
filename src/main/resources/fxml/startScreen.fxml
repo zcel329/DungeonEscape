@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="startScreenPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="800.0" stylesheets="@../css/roomStylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.StartScreenController">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/StartScreenBackground.jpeg" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="timerChoice" layoutX="338.0" layoutY="454.0" prefWidth="150.0" />
+      <Button fx:id="btnStart" layoutX="373.0" layoutY="650.0" mnemonicParsing="false" onAction="#onStartGame" prefHeight="50.0" prefWidth="80.0" styleClass="start-button" stylesheets="@../css/roomStylesheet.css" text="Start" />
+      <Label layoutX="339.0" layoutY="404.0" styleClass="white-text" stylesheets="@../css/roomStylesheet.css" text="Time to complete" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font></Label>
+      <ChoiceBox fx:id="difficultyChoice" layoutX="338.0" layoutY="565.0" prefWidth="150.0" />
+      <Label layoutX="371.0" layoutY="515.0" styleClass="white-text" stylesheets="@../css/roomStylesheet.css" text="Difficulty" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font></Label>
+      <Label alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" layoutX="96.0" layoutY="37.0" prefHeight="51.0" prefWidth="636.0" styleClass="white-text" text="Welcome To The Dungeon" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial" size="35.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="182.0" prefHeight="187.0" prefWidth="321.0" styleClass="white-text" stylesheets="@../css/roomStylesheet.css" text="You're trapped in a mysterious dungeon and must find a way to escape!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#toLeaderboard" prefHeight="40.0" prefWidth="160.0" text="Leaderboard" />
+      <ImageView fx:id="soundToggle" fitHeight="40.0" fitWidth="40.0" layoutX="650.0" layoutY="20.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" styleClass="white-text-small">
+         <image>
+            <Image url="@../images/sound/audioOn.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="710.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#clickExit" text="Quit" />
+   </children>
+</Pane>

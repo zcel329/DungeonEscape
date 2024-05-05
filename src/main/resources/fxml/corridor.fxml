@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="corridor" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" prefHeight="730.0" prefWidth="798.0" stylesheets="@../css/roomStylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.CorridorController">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="730.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/CorridorBackground.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="710.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#clickExit" prefHeight="40.0" prefWidth="70.0" stylesheets="@../css/roomStylesheet.css" text="Quit">
+
+         <font>
+            <Font name="Old English Text MT" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblTime" alignment="CENTER" contentDisplay="RIGHT" layoutX="338.0" layoutY="20.0" prefHeight="25.0" prefWidth="125.0" styleClass="white-text" text="s" textFill="WHITE">
+         <font>
+            <Font name="Old English Text MT" size="40.0" />
+         </font>
+      </Label>
+      <Pane fx:id="popUp" layoutX="125.0" layoutY="550.0" prefHeight="80.0" prefWidth="550.0" />
+
+      <Group layoutX="401.0" layoutY="529.0">
+         <children>
+            <Polygon fx:id="polygon" fill="DODGERBLUE" opacity="0.0" points="102.0, -355.0, 48.0, -323.0, 23.0, -306.0, -16.0, -427.0, -65.0, -395.0, -34.5, -288.5, -73.92144775390625, -251.900634765625, -114.652099609375, -384.5, -169.4609375, -342.0, -114.652099609375, -224.0, -127.0, -182.0, -162.0, -151.0, -180.0, -133.0, -180.0, -133.0, -207.0, -147.74444580078125, -302.15386962890625, -271.0, -357.010498046875, -224.0, -247.0, -97.0, -357.010498046875, -14.0, -169.4609375, 196.0, 158.0, 196.0, 383.0, -36.0, 383.0, -151.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" blendMode="HARD_LIGHT" layoutX="-246.0" layoutY="-128.0" prefHeight="41.0" prefWidth="70.0" rotate="-45.0" text="1" textFill="#830000">
+               <font>
+                  <Font name="Old English Text MT" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" blendMode="DARKEN" layoutX="-118.0" layoutY="-241.0" prefHeight="41.0" prefWidth="70.0" rotate="-45.9" text="2" textFill="#830000">
+               <font>
+                  <Font name="Old English Text MT" size="35.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" blendMode="DARKEN" layoutX="-47.0" layoutY="-312.0" prefHeight="41.0" prefWidth="95.0" rotate="-45.0" text="3" textFill="#830000">
+               <font>
+                  <Font name="Old English Text MT" size="35.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="door2" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="34.0" layoutX="-167.0" layoutY="-357.0" opacity="0.0" rotate="-37.9" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+            <Rectangle fx:id="door3" arcHeight="5.0" arcWidth="5.0" fill="#e821ff" height="43.0" layoutX="-59.0" layoutY="-404.0" opacity="0.0" rotate="-35.5" stroke="BLACK" strokeType="INSIDE" width="52.0" />
+            <Rectangle fx:id="door1" arcHeight="5.0" arcWidth="5.0" fill="#48f242" height="58.0" layoutX="-332.0" layoutY="-263.0" opacity="0.0" rotate="54.5" stroke="BLACK" strokeType="INSIDE" width="23.0" />
+            <ImageView fx:id="treasureChest" fitHeight="77.0" fitWidth="133.0" layoutX="2.0" layoutY="-167.0" onMouseClicked="#onTreasureChestClicked" onMouseEntered="#onImageHover" onMouseExited="#onImageHoverEnd" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/TreasureChest.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="swordandshield" disable="true" fitHeight="92.0" fitWidth="71.0" layoutX="-43.0" layoutY="-170.0" onMouseClicked="#onSwordAndShieldClicked" onMouseEntered="#enlargeItem" onMouseExited="#shrinkItem" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/swordandshield.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="184.0" fitWidth="116.0" layoutX="91.0" layoutY="-432.0" onMouseClicked="#clickDungeonMaster" onMouseEntered="#onImageHover" onMouseExited="#onImageHoverEnd" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dungeonMasterImage.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="player" arcHeight="5.0" arcWidth="5.0" fill="#343536" focusTraversable="true" height="50.0" stroke="#f00000" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+            <ImageView fx:id="rightwardsKey" blendMode="SOFT_LIGHT" fitHeight="50.0" fitWidth="50.0" layoutX="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/D.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="forwardsKey" blendMode="SOFT_LIGHT" fitHeight="50.0" fitWidth="50.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/W.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="leftwardsKey" blendMode="SOFT_LIGHT" fitHeight="50.0" fitWidth="50.0" layoutX="-60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/A.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backwardsKey" blendMode="SOFT_LIGHT" fitHeight="50.0" fitWidth="50.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/S.png" />
+               </image>
+            </ImageView>
+
+         </children>
+      </Group>
+      <ImageView fx:id="soundToggle" fitHeight="40.0" fitWidth="40.0" layoutX="650.0" layoutY="20.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true" styleClass="white-text-small">
+         <image>
+            <Image url="@../images/sound/audioOn.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblObjectiveMarker" alignment="CENTER" layoutX="250.0" layoutY="680.0" prefHeight="40.0" prefWidth="300.0" styleClass="white-text" text="Label" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="700.0" layoutY="120.0" opacity="0.5" prefHeight="240.0" prefWidth="85.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 5px;">
+         <children>
+            <VBox fx:id="inventoryKey1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 1" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="inventoryKey2" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 2" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="inventoryKey3" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Key 3" />
+                  <ImageView fitHeight="60.0" fitWidth="85.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <Group layoutX="-47.0" layoutY="359.0">
+         <children>
+            <ImageView fx:id="chatBackground" fitHeight="270.0" fitWidth="801.0" layoutX="45.0" layoutY="103.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/ChatBackground.jpeg" />
+               </image></ImageView>
+            <Button fx:id="closeButton" layoutX="58.0" layoutY="57.0" mnemonicParsing="false" onAction="#onDisableHint" prefHeight="40.0" prefWidth="84.0" text="Close" />
+            <TextArea fx:id="textArea" editable="false" layoutX="56.0" layoutY="103.0" prefHeight="207.0" prefWidth="782.0" styleClass="text-area" stylesheets="@../css/roomStylesheet.css" wrapText="true" />
+            <Button fx:id="sendButton" layoutX="657.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSendMessage" prefHeight="37.0" text="Send" />
+            <TextField fx:id="inputText" layoutX="56.0" layoutY="318.0" prefHeight="40.0" prefWidth="592.0" styleClass="text-field" stylesheets="@../css/roomStylesheet.css" />
+            <Button fx:id="switchButton" layoutX="739.0" layoutY="319.0" mnemonicParsing="false" onAction="#onChatSwitch" prefWidth="99.0" text="Expand" />
+            <Button fx:id="showButton" layoutX="58.0" layoutY="319.0" mnemonicParsing="false" onAction="#onEnableHint" text="Chat" />
+            <Label fx:id="hintField" alignment="CENTER" contentDisplay="RIGHT" layoutX="142.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="294.0" text="5 Hint(s) Remaining" textFill="WHITE">
+               <font>
+                  <Font name="Old English Text MT" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+
+   </children>
+</Pane>
